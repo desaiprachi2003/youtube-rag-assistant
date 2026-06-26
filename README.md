@@ -7,7 +7,7 @@ It extracts video content, converts speech to text, stores embeddings in a vecto
 
 ## 📸 Demo
 <p align="center">
-  <img src="assets/Demo.gif" width="750"/>
+  <img src="assets/Demo.gif"/>
 </p>
 
 ---
