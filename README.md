@@ -4,11 +4,14 @@ An end-to-end AI system that allows users to ask questions about any YouTube vid
 It extracts video content, converts speech to text, stores embeddings in a vector database, and uses an LLM to generate intelligent answers based on the video.
 
 ---
+
 ## 📸 Demo
 <p align="center">
   <img src="assets/demo.gif" width="750"/>
 </p>
-An end-to-end AI system that allows users to ask questions about any YouTube video using Retrieval-Augmented Generation (RAG).
+
+---
+
 ## 🚀 Features
 
 - 🔗 Input any YouTube video URL  
@@ -25,6 +28,7 @@ An end-to-end AI system that allows users to ask questions about any YouTube vid
 
 ## 🧠 Architecture
 
+```
 YouTube Video  
 ↓  
 Audio Extraction (yt-dlp)  
@@ -42,6 +46,7 @@ Retrieval (Semantic Search)
 LLM (Gemini)  
 ↓  
 Final Answer  
+```
 
 ---
 
@@ -59,32 +64,33 @@ Final Answer
 ---
 
 ## 📁 Project Structure
+
+```bash
 youtube-rag-assistant/
 │
-├── app.py # Streamlit UI
-├── main.py # Optional backend test runner
+├── app.py                 # Streamlit UI
+├── main.py                # Optional backend test runner
 │
 ├── src/
-│ ├── downloader.py # YouTube audio extraction
-│ ├── transcriber.py # Whisper transcription
-│ ├── chunker.py # Text chunking
-│ ├── embeddings.py # Embedding generation
-│ ├── vectordb.py # ChromaDB storage & retrieval
-│ ├── retriever.py # Query retrieval logic
-│ ├── rag_pipeline.py # Main pipeline orchestration
-│ ├── llm.py # Gemini LLM integration
-│ └── config.py # Config & paths
+│   ├── downloader.py      # YouTube audio extraction
+│   ├── transcriber.py     # Whisper transcription
+│   ├── chunker.py         # Text chunking
+│   ├── embeddings.py      # Embedding generation
+│   ├── vectordb.py        # ChromaDB storage & retrieval
+│   ├── retriever.py       # Query retrieval logic
+│   ├── rag_pipeline.py    # Main pipeline orchestration
+│   ├── llm.py             # Gemini LLM integration
+│   └── config.py          # Config & paths
 │
-├── data/ # Downloaded audio files
-├── vectorstore/ # ChromaDB storage
-├── assets/ # UI screenshots / diagrams
+├── data/                  # Downloaded audio files
+├── vectorstore/           # ChromaDB storage
+├── assets/                # UI screenshots / diagrams
 │
-├── .env # API keys
+├── .env                   # API keys
 ├── .env.example
 ├── requirements.txt
 └── README.md
-
----
+```
 
 ---
 
@@ -109,18 +115,31 @@ youtube-rag-assistant/
 ```bash
 git clone https://github.com/your-username/youtube-rag-assistant
 cd youtube-rag-assistant
+```
 
-2. Create virtual environment
+### 2. Create virtual environment
+
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-3. Install dependencies
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-4. Add API key
-Create a .env file in the root directory:
+### 4. Add API key
+
+Create a `.env` file in the root directory:
+
+```env
 GEMINI_API_KEY=your_api_key_here
+```
 
-5. Run the app
+### 5. Run the app
+
+```bash
 streamlit run app.py
-
+```
